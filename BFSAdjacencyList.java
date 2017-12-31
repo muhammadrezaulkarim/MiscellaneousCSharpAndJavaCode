@@ -13,7 +13,7 @@ public class BFSAdjacencyList
 				return; // already visited. so return
 			
 			queue.add(rootNode); //add the root node
-			rootNode.visited=true; // visited
+			//rootNode.visited=true; // visited
 			
 			while(!queue.isEmpty())
 			{		
@@ -21,6 +21,7 @@ public class BFSAdjacencyList
 			
 				Node node=queue.remove();
 				System.out.println("node:"+ node.id);
+				node.visited=true;
 
 				for(col=0; col<node.childrenId.length; col++)
 				{
@@ -28,7 +29,7 @@ public class BFSAdjacencyList
 					
 					if( childNode.visited==false)
 					{
-						childNode.visited=true;
+						//childNode.visited=true;
 						queue.add(childNode);
 					}
 				}
