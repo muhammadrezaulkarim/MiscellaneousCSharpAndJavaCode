@@ -16,7 +16,7 @@ public class BFSAdjacencyMatrix
 			return; // already visited. so return
 		
 		queue.add(root); //add the root node
-		flag[root]=true; // visited
+		//flag[root]=true; // visited
 		
 		while(!queue.isEmpty())
 		{		
@@ -24,14 +24,14 @@ public class BFSAdjacencyMatrix
 		
 			int node=queue.remove();
 			System.out.println("node:"+ node);
-			//flag[node]=true;  // visited
+			flag[node]=true;  // visited
 			
 			for(col=0; col<numOfColumns; col++)
 			{
 				//if(nextCol>=0 && nextCol<numOfColumns && nextRow>=0 && nextRow<numOfRows)
 				if(adjacencyMatrix[node][col]==true && flag[col]==false && col!=node)
 				{
-					flag[col]=true;  // visited
+					//flag[col]=true;  // visited
 					queue.add(col);
 				}
 			}
